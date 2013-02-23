@@ -1,0 +1,38 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <title>genomic-overview-prototype</title>
+        <!--
+        <link rel="stylesheet" type="text/css" href="FIXME" />
+        <script type="text/javascript" src="FIXME"></script>
+        <style type="text/css">
+            /* <![CDATA[ */
+            /* ]]> */
+        </style>
+        -->
+        <style type='text/css'>
+            .genome-axis {
+                font: 10px sans-serif;
+            }
+
+            .genome-axis path, .genome-axis line {
+                fill: none;
+                stroke: #000;
+                shape-rendering: crispEdges;
+            }
+        </style>
+        <script type="text/javascript" src="js/d3/d3.v2.min.js"></script>
+        <script type="text/javascript" src="js/genomic-overview.js"></script>
+        <script type="text/javascript" src="js/jquery.min.js"></script>
+    </head>
+    <body>
+        <script type="text/javascript" >
+            var go = GO();
+
+            console.log(go);
+            go.genome_axis(d3.select('body'));
+
+            go.gistic('tcga_gbm');
+        </script>
+</body>
+</html>
